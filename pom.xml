@@ -9,7 +9,25 @@
   <version>1.0-SNAPSHOT</version>
   <name>Parent</name>
   <description>Just a pom that makes it easy to build both projects at the same time.</description>
-  <profiles>
+  <distributionManagement>
+
+<repository>
+
+<id>nexus</id>
+
+<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+
+</repository>
+
+<snapshotrepository>
+
+<id>nexus</id>
+<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+
+</snapshotrepository>
+
+</distributionManagement>
+<profiles>
            <profile>
                     <id>sonar</id>
                     <properties>
